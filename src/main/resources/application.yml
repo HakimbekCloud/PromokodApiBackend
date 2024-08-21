@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: PromokodAPI
+  datasource:
+    url: jdbc:postgresql://roundhouse.proxy.rlwy.net:14387/railway
+    username: postgres
+    password: mmfKTZVzAMUSxkucqIwXfJmqnIqhracI
+    driver-class-name: org.postgresql.Driver
+  jpa:
+
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8080
+#  ssl:
+#    key-alias: promocode
+#    key-store: classpath:promocode.p12
+#    key-store-password: promocode
+#    key-store-type: PKCS12
+#logging:
+#  level:
+#    org:
+#      apache:
+#        coyote:
+#          http11:
+#            Http11Processor: DEBUG
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
